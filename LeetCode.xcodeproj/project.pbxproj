@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		28B6BE5625747398006E4DD6 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6BE5525747398006E4DD6 /* Tests.swift */; };
 		28B6BE62257474A1006E4DD6 /* p1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6BE61257474A1006E4DD6 /* p1.swift */; };
+		2E1507342D18CF86D7B1F094 /* p2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E150FE1ECAA82D50A2B6248 /* p2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		28B6BE5325747398006E4DD6 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		28B6BE5525747398006E4DD6 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		28B6BE5725747398006E4DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28B6BE61257474A1006E4DD6 /* p1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p1.swift; sourceTree = "<group>"; };
+		2E150FE1ECAA82D50A2B6248 /* p2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = p2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				28B6BE602574747E006E4DD6 /* p1 */,
-				28B6BE5525747398006E4DD6 /* Tests.swift */,
 				28B6BE5725747398006E4DD6 /* Info.plist */,
 			);
 			path = Tests;
@@ -59,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				28B6BE61257474A1006E4DD6 /* p1.swift */,
+				2E150FE1ECAA82D50A2B6248 /* p2.swift */,
 			);
 			path = p1;
 			sourceTree = "<group>";
@@ -90,7 +90,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					28B6BE5225747398006E4DD6 = {
 						CreatedOnToolsVersion = 12.0.1;
@@ -131,7 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28B6BE62257474A1006E4DD6 /* p1.swift in Sources */,
-				28B6BE5625747398006E4DD6 /* Tests.swift in Sources */,
+				2E1507342D18CF86D7B1F094 /* p2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +141,8 @@
 		287178B325746E2000FEC3D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
