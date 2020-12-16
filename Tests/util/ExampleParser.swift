@@ -49,6 +49,11 @@ extension TextParser {
 
 class ExampleParser {
 
+    static func readAllExamples(_ problem: String, _ funcType: FuncType) -> [Example] {
+        listFiles(problem)
+            .flatMap { readExampleFile($0, funcType) }
+    }
+
     static func listFiles(_ problem: String) -> [URL] {
         let bundle = Bundle.init(for: ExampleParser.self)
         let allUrls: [URL] = bundle.urls(forResourcesWithExtension: "txt", subdirectory: nil) ?? []
@@ -56,6 +61,7 @@ class ExampleParser {
             $0.lastPathComponent.starts(with: problem + "-")
         }
     }
+
     static func readExampleFile(_ url: URL, _ funcType: FuncType) -> [Example] {
         let text: String = try! String(contentsOf: url, encoding: .utf8)
         let parser = TextParser(text)

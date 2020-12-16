@@ -27,11 +27,15 @@ extension TextParser {
 struct FuncParser {
 
     // parse function declaration
-    static func parse(_ f: Any) -> FuncType {
+    static func parse<I, O>(_ function: (I) -> O) -> FuncType {
+        let dump = "\(type(of: function))"
+        return parse(dump: dump)
+    }
+    static func parse(dump: String) -> FuncType {
         // (Int) -> Int
         // (Array<Int>, Int) -> Int
         // (Array<Array<Int>>, Array<Int>, Int) -> Array<Int>
-        let parser = TextParser("\(type(of: f))")
+        let parser = TextParser(dump)
 
         var inTypes: [ParameterType] = []
         parser.skip("(")

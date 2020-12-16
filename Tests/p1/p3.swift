@@ -41,10 +41,7 @@ class p3: XCTestCase {
 
 
     func testExample() throws {
-        XCTAssertEqual(lengthOfLongestSubstring("abcabcbb"), 3)
-        XCTAssertEqual(lengthOfLongestSubstring("bbbbb"), 1)
-        XCTAssertEqual(lengthOfLongestSubstring("pwwkew"), 3)
-        XCTAssertEqual(lengthOfLongestSubstring(""), 0)
+        Judger.judge("p3", lengthOfLongestSubstring)
     }
 
 }
