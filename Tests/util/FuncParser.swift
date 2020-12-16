@@ -1,20 +1,21 @@
 import XCTest
 
-indirect enum JType: Equatable {
+indirect enum ParameterType: Equatable {
     case int
     case string
-    case arr(JType)
+    case arr(ParameterType)
 }
+typealias FuncType = (params: [ParameterType], output: ParameterType)
 
 extension TextParser {
-    func parseType() -> JType {
+    func parseParameterType() -> ParameterType {
         let word = readWord()
         switch word {
         case "Int": return .int
         case "String": return .string
         case "Array":
             skip("<")
-            let t = parseType()
+            let t = parseParameterType()
             skip(">")
             return .arr(t)
         default:
@@ -23,19 +24,19 @@ extension TextParser {
     }
 }
 
-struct Reflector {
+struct FuncParser {
 
     // parse function declaration
-    static func parse(_ f: Any) -> ([JType], JType) {
+    static func parse(_ f: Any) -> FuncType {
         // (Int) -> Int
         // (Array<Int>, Int) -> Int
         // (Array<Array<Int>>, Array<Int>, Int) -> Array<Int>
         let parser = TextParser("\(type(of: f))")
 
-        var inTypes: [JType] = []
+        var inTypes: [ParameterType] = []
         parser.skip("(")
         while true {
-            inTypes.append(parser.parseType())
+            inTypes.append(parser.parseParameterType())
             if let c = parser.peak(), c == ")" {
                 break
             } else {
@@ -43,14 +44,14 @@ struct Reflector {
             }
         }
         parser.skip(") -> ")
-        let outType = parser.parseType()
-        assert(parser.isEof())
+        let outType = parser.parseParameterType()
+        assert(parser.eof())
         return (inTypes, outType)
     }
 
 }
 
-class ReflectorTest: XCTestCase {
+class FuncParserTest: XCTestCase {
 
     func f_1(x: Int) -> Int { x + 1 }
     func f_2(x: [Int], y: Int) -> Int { x.reduce(0, +) + y }
@@ -58,10 +59,10 @@ class ReflectorTest: XCTestCase {
 
     func testExample() throws {
         let p = p3()
-        XCTAssertTrue(Reflector.parse(f_3) == ([.arr(.arr(.int)), .arr(.int), .int], .arr(.int)))
-        XCTAssertTrue(Reflector.parse(f_2) == ([.arr(.int), .int], .int))
-        XCTAssertTrue(Reflector.parse(p.lengthOfLongestSubstring) == ([.string], .int))
-        XCTAssertTrue(Reflector.parse(f_1) == ([.int], .int))
+        XCTAssertTrue(FuncParser.parse(f_3) == ([.arr(.arr(.int)), .arr(.int), .int], .arr(.int)))
+        XCTAssertTrue(FuncParser.parse(f_2) == ([.arr(.int), .int], .int))
+        XCTAssertTrue(FuncParser.parse(p.lengthOfLongestSubstring) == ([.string], .int))
+        XCTAssertTrue(FuncParser.parse(f_1) == ([.int], .int))
     }
 
 }
