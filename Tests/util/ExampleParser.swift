@@ -9,7 +9,7 @@ extension TextParser {
 
     func skipParameterName() {
         if let c = peak(), c.isLetter {
-            readWord()
+            skipWhile { $0.isLetter || $0.isNumber }
             skipWhitespace()
             skip("=")
             skipWhitespace()
@@ -20,6 +20,9 @@ extension TextParser {
         case .int:
             let word = readWord()
             return Int(word)!
+        case .double:
+            let word = readWhile { $0.isNumber || $0 == "." }
+            return Double(word)
         case .string:
             var chars: [Character] = []
             skip("\"")
@@ -51,7 +54,7 @@ class ExampleParser {
 
     static func readAllExamples(_ problem: String, _ funcType: FuncType) -> [Example] {
         listFiles(problem)
-            .flatMap { readExampleFile($0, funcType) }
+            .flatMap { readFile($0, funcType) }
     }
 
     static func listFiles(_ problem: String) -> [URL] {
@@ -59,6 +62,18 @@ class ExampleParser {
         let allUrls: [URL] = bundle.urls(forResourcesWithExtension: "txt", subdirectory: nil) ?? []
         return allUrls.filter {
             $0.lastPathComponent.starts(with: problem + "-")
+        }
+    }
+
+    static func readFile(_ url: URL, _ funcType: FuncType) -> [Example] {
+        let filename = url.lastPathComponent
+        if filename.contains("example") {
+            return readExampleFile(url, funcType)
+        } else if filename.contains("err") {
+            return [readErrFile(url, funcType)]
+        } else {
+            assert(false, "unknown file type \(filename)")
+            return []
         }
     }
 
@@ -115,6 +130,18 @@ class ExampleParser {
             }
         }
         return examples
+    }
+
+    static func readErrFile(_ url: URL, _ funcType: FuncType) -> Example {
+        let text: String = try! String(contentsOf: url, encoding: .utf8)
+        let parser = TextParser(text)
+
+        let example = Example()
+        for param in funcType.params {
+            parser.skipWhitespace()
+            example.input.append(parser.parseData(param))
+        }
+        return example
     }
 
 }

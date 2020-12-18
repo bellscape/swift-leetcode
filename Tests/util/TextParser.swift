@@ -37,14 +37,17 @@ public class TextParser {
         assert(hasPrefix(text))
         cursor = input.index(cursor, offsetBy: text.count)
     }
-    func readWord() -> String {
+    func readWhile(_ predicate: (Character) -> Bool) -> String {
         var chars: [Character] = []
-        while let c = peak(), (c.isLetter || c.isNumber) {
+        while let c = peak(), predicate(c) {
             chars.append(c)
             next()
         }
-        assert(!chars.isEmpty)
         return String(chars)
+    }
+    func readWord() -> String {
+        let word = readWhile { $0.isLetter || $0.isNumber }
+        return word
     }
 
 }

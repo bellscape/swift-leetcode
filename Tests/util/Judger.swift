@@ -31,6 +31,9 @@ struct Judger {
                 let actual = example.call(function)
                 print("Output actual: \(actual)")
                 XCTAssertEqual(actual, output as! O)
+            } else {
+                let actual = example.call(function)
+                print("Output actual: \(actual)")
             }
         }
         print()

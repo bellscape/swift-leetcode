@@ -2,6 +2,7 @@ import XCTest
 
 indirect enum ParameterType: Equatable {
     case int
+    case double
     case string
     case arr(ParameterType)
 }
@@ -12,6 +13,7 @@ extension TextParser {
         let word = readWord()
         switch word {
         case "Int": return .int
+        case "Double": return .double
         case "String": return .string
         case "Array":
             skip("<")
@@ -39,6 +41,13 @@ struct FuncParser {
 
         var inTypes: [ParameterType] = []
         parser.skip("(")
+
+        var hasTuple = false
+        if let c = parser.peak(), c == "(" {
+            hasTuple = true
+            parser.next()
+        }
+
         while true {
             inTypes.append(parser.parseParameterType())
             if let c = parser.peak(), c == ")" {
@@ -47,6 +56,8 @@ struct FuncParser {
                 parser.skip(", ")
             }
         }
+
+        if hasTuple { parser.skip(")") }
         parser.skip(") -> ")
         let outType = parser.parseParameterType()
         assert(parser.eof())

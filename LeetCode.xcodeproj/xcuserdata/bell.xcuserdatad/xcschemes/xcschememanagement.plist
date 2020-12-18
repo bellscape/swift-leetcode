@@ -24,7 +24,33 @@
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>p3.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>3</integer>
+		</dict>
+		<key>ExampleParserTest.testListFiles.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>TextParserTest.testExample.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>p3.testExample.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 	</dict>
 </dict>
