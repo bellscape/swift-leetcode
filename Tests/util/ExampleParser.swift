@@ -22,7 +22,7 @@ extension TextParser {
             return Int(word)!
         case .double:
             let word = readWhile { $0.isNumber || $0 == "." }
-            return Double(word)
+            return Double(word) ?? 0.0
         case .string:
             var chars: [Character] = []
             skip("\"")
