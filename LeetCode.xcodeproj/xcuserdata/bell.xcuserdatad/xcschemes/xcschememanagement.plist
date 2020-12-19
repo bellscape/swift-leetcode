@@ -31,28 +31,28 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>TextParserTest.testExample.xcscheme</key>
+		<key>p3.testExample.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>p3.testExample.xcscheme</key>
+		<key>p5.testExample.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>p5.testExample.xcscheme</key>
+		<key>p6.testExample.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
-		<key>p6.testExample.xcscheme</key>
+		<key>p7.testExample.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />

@@ -38,16 +38,15 @@ public class TextParser {
         cursor = input.index(cursor, offsetBy: text.count)
     }
     func readWhile(_ predicate: (Character) -> Bool) -> String {
-        var chars: [Character] = []
+        var out: String = ""
         while let c = peak(), predicate(c) {
-            chars.append(c)
+            out.append(c)
             next()
         }
-        return String(chars)
+        return out
     }
     func readWord() -> String {
-        let word = readWhile { $0.isLetter || $0.isNumber }
-        return word
+        readWhile { $0.isLetter || $0.isNumber }
     }
 
 }

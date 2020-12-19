@@ -18,10 +18,10 @@ extension TextParser {
     func parseData(_ type: ParameterType) -> Any {
         switch type {
         case .int:
-            let word = readWord()
+            let word = readWhile { $0.isNumber || $0 == "-" }
             return Int(word)!
         case .double:
-            let word = readWhile { $0.isNumber || $0 == "." }
+            let word = readWhile { $0.isNumber || $0 == "." || $0 == "-" }
             return Double(word) ?? 0.0
         case .string:
             var chars: [Character] = []
@@ -71,6 +71,8 @@ class ExampleParser {
             return readExampleFile(url, funcType)
         } else if filename.contains("err") {
             return [readErrFile(url, funcType)]
+        } else if filename.contains("wa") {
+            return [readWAFile(url, funcType)]
         } else {
             assert(false, "unknown file type \(filename)")
             return []
@@ -141,6 +143,33 @@ class ExampleParser {
             parser.skipWhitespace()
             example.input.append(parser.parseData(param))
         }
+        return example
+    }
+
+    static func readWAFile(_ url: URL, _ funcType: FuncType) -> Example {
+        let text: String = try! String(contentsOf: url, encoding: .utf8)
+        let parser = TextParser(text)
+        let example = Example()
+
+        parser.skipWhitespace()
+        parser.skip("Input:")
+        for param in funcType.params {
+            parser.skipWhitespace()
+            example.input.append(parser.parseData(param))
+        }
+
+        while true {
+            parser.skipWhitespace()
+            if !parser.hasPrefix("Expected:") {
+                parser.skipThisLine()
+            } else {
+                parser.skip("Expected:")
+                parser.skipWhitespace()
+                break
+            }
+        }
+        example.output = parser.parseData(funcType.output)
+
         return example
     }
 
