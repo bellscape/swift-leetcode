@@ -26,14 +26,11 @@ struct Judger {
             print()
             print("Example \(i + 1):")
             print("Input: \(example.input)")
+            let actual = example.call(function)
+            print("Output actual: \(actual)")
             if let output = example.output {
-                print("Output: \(output)")
-                let actual = example.call(function)
-                print("Output actual: \(actual)")
+                print("Output expected: \(output)")
                 XCTAssertEqual(actual, output as! O)
-            } else {
-                let actual = example.call(function)
-                print("Output actual: \(actual)")
             }
         }
         print()

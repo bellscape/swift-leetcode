@@ -1,0 +1,6 @@
+Input:
+"-+12"
+Output:
+-2147483648
+Expected:
+0
