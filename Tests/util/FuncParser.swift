@@ -3,6 +3,7 @@ import XCTest
 indirect enum ParameterType: Equatable {
     case int
     case double
+    case bool
     case string
     case arr(ParameterType)
 }
@@ -15,6 +16,7 @@ extension TextParser {
         case "Int": return .int
         case "Double": return .double
         case "String": return .string
+        case "Bool": return .bool
         case "Array":
             skip("<")
             let t = parseParameterType()

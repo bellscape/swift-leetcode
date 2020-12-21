@@ -23,6 +23,10 @@ extension TextParser {
         case .double:
             let word = readWhile { $0.isNumber || $0 == "." || $0 == "-" }
             return Double(word) ?? 0.0
+        case .bool:
+            let word = readWord()
+            assert(word == "true" || word == "false")
+            return word == "true"
         case .string:
             var chars: [Character] = []
             skip("\"")
