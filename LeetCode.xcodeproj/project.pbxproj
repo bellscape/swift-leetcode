@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28091F4F25917144008AD8F4 /* p9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28091F4E25917144008AD8F4 /* p9.swift */; };
+		28091F5325917151008AD8F4 /* p9-example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28091F5225917151008AD8F4 /* p9-example.txt */; };
 		2843B04125882FE0007C371B /* ExampleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2843B04025882FE0007C371B /* ExampleParser.swift */; };
 		285D2ED325859A9100B8B84B /* p3-example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 285D2ED225859A9100B8B84B /* p3-example.txt */; };
 		285D2EE32586D86E00B8B84B /* Judger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D2EE22586D86E00B8B84B /* Judger.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28091F4E25917144008AD8F4 /* p9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = p9.swift; sourceTree = "<group>"; };
+		28091F5225917151008AD8F4 /* p9-example.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "p9-example.txt"; sourceTree = "<group>"; };
 		2843B04025882FE0007C371B /* ExampleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleParser.swift; sourceTree = "<group>"; };
 		285D2ED225859A9100B8B84B /* p3-example.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "p3-example.txt"; sourceTree = "<group>"; };
 		285D2EE22586D86E00B8B84B /* Judger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Judger.swift; sourceTree = "<group>"; };
@@ -82,10 +86,10 @@
 		285D2ED525859AE900B8B84B /* util */ = {
 			isa = PBXGroup;
 			children = (
-				285D2EE22586D86E00B8B84B /* Judger.swift */,
-				285D2EE52586DE4800B8B84B /* FuncParser.swift */,
 				285D2EE82586E6DF00B8B84B /* TextParser.swift */,
+				285D2EE52586DE4800B8B84B /* FuncParser.swift */,
 				2843B04025882FE0007C371B /* ExampleParser.swift */,
+				285D2EE22586D86E00B8B84B /* Judger.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -142,6 +146,8 @@
 				2E15091C2DC9C42C909A6366 /* p8-wa.txt */,
 				2E150DF93E04C35FC75D9A2C /* p8-wa2.txt */,
 				2E1503B7605E21105E5EA7FB /* p8-wa3.txt */,
+				28091F4E25917144008AD8F4 /* p9.swift */,
+				28091F5225917151008AD8F4 /* p9-example.txt */,
 			);
 			path = p1;
 			sourceTree = "<group>";
@@ -217,6 +223,7 @@
 				2E150D37F9F52D749FD86FDE /* p8-wa.txt in Resources */,
 				2E1504F61DC3B9390725C02A /* readme.txt in Resources */,
 				2E15007D8CC24F690F1FD72B /* p8-wa2.txt in Resources */,
+				28091F5325917151008AD8F4 /* p9-example.txt in Resources */,
 				2E15047DA44A9FB4695E3EAE /* p8-wa3.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +244,7 @@
 				2E150AF39CCE03D7527846C0 /* p3.swift in Sources */,
 				2877ED31258AE70600918C28 /* p4.swift in Sources */,
 				2E1505CD7F3C5A9984DB3DE9 /* p5.swift in Sources */,
+				28091F4F25917144008AD8F4 /* p9.swift in Sources */,
 				2E1508EB27150A4A50EA104F /* p6.swift in Sources */,
 				2E150683F71E86704E0774B9 /* p7.swift in Sources */,
 				2E150925BBD54F6E4AFA03C9 /* p8.swift in Sources */,
