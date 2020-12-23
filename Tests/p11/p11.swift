@@ -6,7 +6,25 @@ class p11: XCTestCase {
     }
 
 
+    // simplify, faster than 99%
     func maxArea(_ height: [Int]) -> Int {
+        var left = 0, right = height.count - 1
+        var bestResult = 0
+        while left < right {
+            let leftH = height[left], rightH = height[right];
+            bestResult = max(bestResult, min(leftH, rightH) * (right - left))
+            if (leftH < rightH) {
+                left += 1
+            } else {
+                right -= 1
+            }
+        }
+        return bestResult
+    }
+
+
+    // faster than 53%
+    func maxArea_v2(_ height: [Int]) -> Int {
         let n = height.count
         var leftI = 0
         var leftHeight = height[leftI]
