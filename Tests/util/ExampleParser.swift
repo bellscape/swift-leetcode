@@ -71,11 +71,11 @@ class ExampleParser {
 
     static func readFile(_ url: URL, _ funcType: FuncType) -> [Example] {
         let filename = url.lastPathComponent
-        if filename.contains("example") {
+        if filename.contains("-example") {
             return readExampleFile(url, funcType)
-        } else if filename.contains("err") {
+        } else if filename.contains("-err") || filename.contains("-timeout") {
             return [readErrFile(url, funcType)]
-        } else if filename.contains("wa") {
+        } else if filename.contains("-wa") {
             return [readWAFile(url, funcType)]
         } else {
             assert(false, "unknown file type \(filename)")

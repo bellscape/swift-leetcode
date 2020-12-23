@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28016D2F2592D11800B2FAB7 /* p11-example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28A159232592CCC900B4B79D /* p11-example.txt */; };
+		28016D322592D20000B2FAB7 /* p11-timeout.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28016D312592D20000B2FAB7 /* p11-timeout.txt */; };
 		28091F4F25917144008AD8F4 /* p9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28091F4E25917144008AD8F4 /* p9.swift */; };
 		28091F5325917151008AD8F4 /* p9-example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28091F5225917151008AD8F4 /* p9-example.txt */; };
 		2843B04125882FE0007C371B /* ExampleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2843B04025882FE0007C371B /* ExampleParser.swift */; };
@@ -19,6 +21,7 @@
 		2877ED37258CF9ED00918C28 /* p4-err.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2877ED36258CF9ED00918C28 /* p4-err.txt */; };
 		2877ED3A258D009800918C28 /* p4-err2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2877ED39258D009800918C28 /* p4-err2.txt */; };
 		2877ED3D258D12C800918C28 /* p4-err3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2877ED3C258D12C800918C28 /* p4-err3.txt */; };
+		28A159202592CC8700B4B79D /* p11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1591F2592CC8700B4B79D /* p11.swift */; };
 		28B6BE62257474A1006E4DD6 /* p1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6BE61257474A1006E4DD6 /* p1.swift */; };
 		2E150060CD6D7DE152FB9A5A /* p8-example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E150B768C15D33C88158328 /* p8-example.txt */; };
 		2E15007D8CC24F690F1FD72B /* p8-wa2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E150DF93E04C35FC75D9A2C /* p8-wa2.txt */; };
@@ -41,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28016D312592D20000B2FAB7 /* p11-timeout.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "p11-timeout.txt"; sourceTree = "<group>"; };
 		28091F4E25917144008AD8F4 /* p9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = p9.swift; sourceTree = "<group>"; };
 		28091F5225917151008AD8F4 /* p9-example.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "p9-example.txt"; sourceTree = "<group>"; };
 		2843B04025882FE0007C371B /* ExampleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleParser.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 		2877ED36258CF9ED00918C28 /* p4-err.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "p4-err.txt"; sourceTree = "<group>"; };
 		2877ED39258D009800918C28 /* p4-err2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "p4-err2.txt"; sourceTree = "<group>"; };
 		2877ED3C258D12C800918C28 /* p4-err3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "p4-err3.txt"; sourceTree = "<group>"; };
+		28A1591F2592CC8700B4B79D /* p11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p11.swift; sourceTree = "<group>"; };
+		28A159232592CCC900B4B79D /* p11-example.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "p11-example.txt"; sourceTree = "<group>"; };
 		28B6BE5325747398006E4DD6 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B6BE5725747398006E4DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28B6BE61257474A1006E4DD6 /* p1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p1.swift; sourceTree = "<group>"; };
@@ -115,11 +121,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		28A1591E2592CC7300B4B79D /* p11 */ = {
+			isa = PBXGroup;
+			children = (
+				28A1591F2592CC8700B4B79D /* p11.swift */,
+				28A159232592CCC900B4B79D /* p11-example.txt */,
+				28016D312592D20000B2FAB7 /* p11-timeout.txt */,
+			);
+			path = p11;
+			sourceTree = "<group>";
+		};
 		28B6BE5425747398006E4DD6 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				285D2ED525859AE900B8B84B /* util */,
 				28B6BE602574747E006E4DD6 /* p1 */,
+				28A1591E2592CC7300B4B79D /* p11 */,
 				28B6BE5725747398006E4DD6 /* Info.plist */,
 			);
 			path = Tests;
@@ -215,6 +232,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28016D322592D20000B2FAB7 /* p11-timeout.txt in Resources */,
+				28016D2F2592D11800B2FAB7 /* p11-example.txt in Resources */,
 				2877ED37258CF9ED00918C28 /* p4-err.txt in Resources */,
 				2877ED3A258D009800918C28 /* p4-err2.txt in Resources */,
 				285D2ED325859A9100B8B84B /* p3-example.txt in Resources */,
@@ -252,6 +271,7 @@
 				2877ED31258AE70600918C28 /* p4.swift in Sources */,
 				2E1505CD7F3C5A9984DB3DE9 /* p5.swift in Sources */,
 				28091F4F25917144008AD8F4 /* p9.swift in Sources */,
+				28A159202592CC8700B4B79D /* p11.swift in Sources */,
 				2E1508EB27150A4A50EA104F /* p6.swift in Sources */,
 				2E150683F71E86704E0774B9 /* p7.swift in Sources */,
 				2E150925BBD54F6E4AFA03C9 /* p8.swift in Sources */,
