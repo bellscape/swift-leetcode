@@ -8,6 +8,29 @@ class p13: XCTestCase {
 
     // faster than 91%
     func romanToInt(_ s: String) -> Int {
+        let dict: [Character: Int] = [
+            "I": 1, "V": 5, "X": 10, "L": 50,
+            "C": 100, "D": 500, "M": 1000]
+
+        var out = 0
+        var prev = 0
+        var i = s.count - 1
+        while i >= 0 {
+            let base = dict[s[s.index(s.startIndex, offsetBy: i)]]!
+            if base >= prev {
+                out += base
+            } else {
+                out -= base
+            }
+            prev = base
+            i -= 1
+        }
+        return out
+    }
+
+
+    // faster than 91%
+    func romanToInt_v2(_ s: String) -> Int {
         var out = 0
         var last = 1000
         for c in s {
