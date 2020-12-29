@@ -31,6 +31,8 @@
 		28B51662259815B40006D557 /* p15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B51661259815B40006D557 /* p15.swift */; };
 		28B51665259815CF0006D557 /* p15-example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28B51664259815CF0006D557 /* p15-example.txt */; };
 		28B6BE62257474A1006E4DD6 /* p1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6BE61257474A1006E4DD6 /* p1.swift */; };
+		28CE5799259BF4CD00CDA37D /* p18.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CE5798259BF4CD00CDA37D /* p18.swift */; };
+		28CE579C259BF4DB00CDA37D /* p18-example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28CE579B259BF4DB00CDA37D /* p18-example.txt */; };
 		28F98C18259959E100FAB7B3 /* p16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F98C17259959E100FAB7B3 /* p16.swift */; };
 		28F98C1B25995A0300FAB7B3 /* p16-example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28F98C1A25995A0300FAB7B3 /* p16-example.txt */; };
 		28F98C1F259AA63B00FAB7B3 /* p17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F98C1E259AA63B00FAB7B3 /* p17.swift */; };
@@ -84,6 +86,8 @@
 		28B6BE5325747398006E4DD6 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B6BE5725747398006E4DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28B6BE61257474A1006E4DD6 /* p1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p1.swift; sourceTree = "<group>"; };
+		28CE5798259BF4CD00CDA37D /* p18.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p18.swift; sourceTree = "<group>"; };
+		28CE579B259BF4DB00CDA37D /* p18-example.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "p18-example.txt"; sourceTree = "<group>"; };
 		28F98C17259959E100FAB7B3 /* p16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p16.swift; sourceTree = "<group>"; };
 		28F98C1A25995A0300FAB7B3 /* p16-example.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "p16-example.txt"; sourceTree = "<group>"; };
 		28F98C1E259AA63B00FAB7B3 /* p17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p17.swift; sourceTree = "<group>"; };
@@ -165,10 +169,12 @@
 				28B51664259815CF0006D557 /* p15-example.txt */,
 				2E150F44E608C117E6FA5226 /* p15-wa.txt */,
 				28F98C17259959E100FAB7B3 /* p16.swift */,
-				28F98C1E259AA63B00FAB7B3 /* p17.swift */,
 				28F98C1A25995A0300FAB7B3 /* p16-example.txt */,
 				2E1501F5018920A547E71FD4 /* p16-wa.txt */,
+				28F98C1E259AA63B00FAB7B3 /* p17.swift */,
 				28F98C21259AA6A600FAB7B3 /* p17-example.txt */,
+				28CE5798259BF4CD00CDA37D /* p18.swift */,
+				28CE579B259BF4DB00CDA37D /* p18-example.txt */,
 			);
 			path = p11;
 			sourceTree = "<group>";
@@ -289,6 +295,7 @@
 				2E1509E8755F550AA6D255CD /* p7-wa.txt in Resources */,
 				2E150060CD6D7DE152FB9A5A /* p8-example.txt in Resources */,
 				283DCE5D2596B93F00DC0802 /* p14-example.txt in Resources */,
+				28CE579C259BF4DB00CDA37D /* p18-example.txt in Resources */,
 				28B51665259815CF0006D557 /* p15-example.txt in Resources */,
 				2E150D37F9F52D749FD86FDE /* p8-wa.txt in Resources */,
 				2E1504F61DC3B9390725C02A /* readme.txt in Resources */,
@@ -326,6 +333,7 @@
 				2E1505CD7F3C5A9984DB3DE9 /* p5.swift in Sources */,
 				28F98C1F259AA63B00FAB7B3 /* p17.swift in Sources */,
 				28091F4F25917144008AD8F4 /* p9.swift in Sources */,
+				28CE5799259BF4CD00CDA37D /* p18.swift in Sources */,
 				28A159202592CC8700B4B79D /* p11.swift in Sources */,
 				28F98C18259959E100FAB7B3 /* p16.swift in Sources */,
 				2E1508EB27150A4A50EA104F /* p6.swift in Sources */,
