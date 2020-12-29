@@ -33,6 +33,8 @@
 		28B6BE62257474A1006E4DD6 /* p1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6BE61257474A1006E4DD6 /* p1.swift */; };
 		28F98C18259959E100FAB7B3 /* p16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F98C17259959E100FAB7B3 /* p16.swift */; };
 		28F98C1B25995A0300FAB7B3 /* p16-example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28F98C1A25995A0300FAB7B3 /* p16-example.txt */; };
+		28F98C1F259AA63B00FAB7B3 /* p17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F98C1E259AA63B00FAB7B3 /* p17.swift */; };
+		28F98C22259AA6A600FAB7B3 /* p17-example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28F98C21259AA6A600FAB7B3 /* p17-example.txt */; };
 		2E150060CD6D7DE152FB9A5A /* p8-example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E150B768C15D33C88158328 /* p8-example.txt */; };
 		2E15007D8CC24F690F1FD72B /* p8-wa2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E150DF93E04C35FC75D9A2C /* p8-wa2.txt */; };
 		2E1503255399209492576152 /* p7-example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2E15088D817E675303865EFC /* p7-example.txt */; };
@@ -84,6 +86,8 @@
 		28B6BE61257474A1006E4DD6 /* p1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p1.swift; sourceTree = "<group>"; };
 		28F98C17259959E100FAB7B3 /* p16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p16.swift; sourceTree = "<group>"; };
 		28F98C1A25995A0300FAB7B3 /* p16-example.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "p16-example.txt"; sourceTree = "<group>"; };
+		28F98C1E259AA63B00FAB7B3 /* p17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p17.swift; sourceTree = "<group>"; };
+		28F98C21259AA6A600FAB7B3 /* p17-example.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "p17-example.txt"; sourceTree = "<group>"; };
 		2E1501F5018920A547E71FD4 /* p16-wa.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "p16-wa.txt"; sourceTree = "<group>"; };
 		2E150205A23EEC42C605B4A1 /* p7-wa.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "p7-wa.txt"; sourceTree = "<group>"; };
 		2E150282F5FD0B82CE19FB51 /* p7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = p7.swift; sourceTree = "<group>"; };
@@ -161,8 +165,10 @@
 				28B51664259815CF0006D557 /* p15-example.txt */,
 				2E150F44E608C117E6FA5226 /* p15-wa.txt */,
 				28F98C17259959E100FAB7B3 /* p16.swift */,
+				28F98C1E259AA63B00FAB7B3 /* p17.swift */,
 				28F98C1A25995A0300FAB7B3 /* p16-example.txt */,
 				2E1501F5018920A547E71FD4 /* p16-wa.txt */,
+				28F98C21259AA6A600FAB7B3 /* p17-example.txt */,
 			);
 			path = p11;
 			sourceTree = "<group>";
@@ -294,6 +300,7 @@
 				2E150AB470866AA6F300772B /* p10-example.txt in Resources */,
 				2E150AC73C06DE1C96BF0532 /* p15-wa.txt in Resources */,
 				2E150AEFE2A64DD075B70381 /* p16-wa.txt in Resources */,
+				28F98C22259AA6A600FAB7B3 /* p17-example.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +324,7 @@
 				283DCE5325956CAD00DC0802 /* p13.swift in Sources */,
 				2877ED31258AE70600918C28 /* p4.swift in Sources */,
 				2E1505CD7F3C5A9984DB3DE9 /* p5.swift in Sources */,
+				28F98C1F259AA63B00FAB7B3 /* p17.swift in Sources */,
 				28091F4F25917144008AD8F4 /* p9.swift in Sources */,
 				28A159202592CC8700B4B79D /* p11.swift in Sources */,
 				28F98C18259959E100FAB7B3 /* p16.swift in Sources */,
