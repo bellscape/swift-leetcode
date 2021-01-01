@@ -11,6 +11,8 @@
 		28016D322592D20000B2FAB7 /* p11-timeout.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28016D312592D20000B2FAB7 /* p11-timeout.txt */; };
 		28091F4F25917144008AD8F4 /* p9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28091F4E25917144008AD8F4 /* p9.swift */; };
 		28091F5325917151008AD8F4 /* p9-example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28091F5225917151008AD8F4 /* p9-example.txt */; };
+		28181D31259EA11800C3A58E /* p20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28181D30259EA11800C3A58E /* p20.swift */; };
+		28181D34259EA12C00C3A58E /* p20-example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28181D33259EA12C00C3A58E /* p20-example.txt */; };
 		283DCE5325956CAD00DC0802 /* p13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283DCE5225956CAD00DC0802 /* p13.swift */; };
 		283DCE5625956CE100DC0802 /* p13-example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 283DCE5525956CE100DC0802 /* p13-example.txt */; };
 		283DCE592596B91800DC0802 /* p14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283DCE582596B91800DC0802 /* p14.swift */; };
@@ -64,6 +66,8 @@
 		28016D312592D20000B2FAB7 /* p11-timeout.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "p11-timeout.txt"; sourceTree = "<group>"; };
 		28091F4E25917144008AD8F4 /* p9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = p9.swift; sourceTree = "<group>"; };
 		28091F5225917151008AD8F4 /* p9-example.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "p9-example.txt"; sourceTree = "<group>"; };
+		28181D30259EA11800C3A58E /* p20.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p20.swift; sourceTree = "<group>"; };
+		28181D33259EA12C00C3A58E /* p20-example.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "p20-example.txt"; sourceTree = "<group>"; };
 		283DCE5225956CAD00DC0802 /* p13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p13.swift; sourceTree = "<group>"; };
 		283DCE5525956CE100DC0802 /* p13-example.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "p13-example.txt"; sourceTree = "<group>"; };
 		283DCE582596B91800DC0802 /* p14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p14.swift; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 				28CE5798259BF4CD00CDA37D /* p18.swift */,
 				28CE579B259BF4DB00CDA37D /* p18-example.txt */,
 				283F632A259D4FC4007A8E00 /* p19.swift */,
+				28181D30259EA11800C3A58E /* p20.swift */,
+				28181D33259EA12C00C3A58E /* p20-example.txt */,
 			);
 			path = p11;
 			sourceTree = "<group>";
@@ -306,6 +312,7 @@
 				2E15007D8CC24F690F1FD72B /* p8-wa2.txt in Resources */,
 				28091F5325917151008AD8F4 /* p9-example.txt in Resources */,
 				283F509B25941B210063DC83 /* p12-example.txt in Resources */,
+				28181D34259EA12C00C3A58E /* p20-example.txt in Resources */,
 				2E15047DA44A9FB4695E3EAE /* p8-wa3.txt in Resources */,
 				2E150AB470866AA6F300772B /* p10-example.txt in Resources */,
 				2E150AC73C06DE1C96BF0532 /* p15-wa.txt in Resources */,
@@ -343,6 +350,7 @@
 				2E150683F71E86704E0774B9 /* p7.swift in Sources */,
 				2E150925BBD54F6E4AFA03C9 /* p8.swift in Sources */,
 				283F632B259D4FC4007A8E00 /* p19.swift in Sources */,
+				28181D31259EA11800C3A58E /* p20.swift in Sources */,
 				2E1506E9D479AB50D495CACE /* p10.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
