@@ -25,6 +25,7 @@
 		285D2EE32586D86E00B8B84B /* Judger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D2EE22586D86E00B8B84B /* Judger.swift */; };
 		285D2EE62586DE4800B8B84B /* FuncParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D2EE52586DE4800B8B84B /* FuncParser.swift */; };
 		285D2EE92586E6DF00B8B84B /* TextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D2EE82586E6DF00B8B84B /* TextParser.swift */; };
+		286F8D61259FFB82001D9E31 /* p21.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286F8D60259FFB82001D9E31 /* p21.swift */; };
 		2877ED31258AE70600918C28 /* p4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877ED30258AE70600918C28 /* p4.swift */; };
 		2877ED34258AE73600918C28 /* p4-example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2877ED33258AE73600918C28 /* p4-example.txt */; };
 		2877ED37258CF9ED00918C28 /* p4-err.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2877ED36258CF9ED00918C28 /* p4-err.txt */; };
@@ -80,6 +81,7 @@
 		285D2EE22586D86E00B8B84B /* Judger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Judger.swift; sourceTree = "<group>"; };
 		285D2EE52586DE4800B8B84B /* FuncParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncParser.swift; sourceTree = "<group>"; };
 		285D2EE82586E6DF00B8B84B /* TextParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextParser.swift; sourceTree = "<group>"; };
+		286F8D60259FFB82001D9E31 /* p21.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p21.swift; sourceTree = "<group>"; };
 		2877ED30258AE70600918C28 /* p4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p4.swift; sourceTree = "<group>"; };
 		2877ED33258AE73600918C28 /* p4-example.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "p4-example.txt"; sourceTree = "<group>"; };
 		2877ED36258CF9ED00918C28 /* p4-err.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "p4-err.txt"; sourceTree = "<group>"; };
@@ -142,6 +144,14 @@
 			path = util;
 			sourceTree = "<group>";
 		};
+		286F8D5E259FFB61001D9E31 /* p21 */ = {
+			isa = PBXGroup;
+			children = (
+				286F8D60259FFB82001D9E31 /* p21.swift */,
+			);
+			path = p21;
+			sourceTree = "<group>";
+		};
 		287178AE25746E2000FEC3D0 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +204,7 @@
 				285D2ED525859AE900B8B84B /* util */,
 				28B6BE602574747E006E4DD6 /* p1 */,
 				28A1591E2592CC7300B4B79D /* p11 */,
+				286F8D5E259FFB61001D9E31 /* p21 */,
 				28B6BE5725747398006E4DD6 /* Info.plist */,
 			);
 			path = Tests;
@@ -343,6 +354,7 @@
 				2E1505CD7F3C5A9984DB3DE9 /* p5.swift in Sources */,
 				28F98C1F259AA63B00FAB7B3 /* p17.swift in Sources */,
 				28091F4F25917144008AD8F4 /* p9.swift in Sources */,
+				286F8D61259FFB82001D9E31 /* p21.swift in Sources */,
 				28CE5799259BF4CD00CDA37D /* p18.swift in Sources */,
 				28A159202592CC8700B4B79D /* p11.swift in Sources */,
 				28F98C18259959E100FAB7B3 /* p16.swift in Sources */,
