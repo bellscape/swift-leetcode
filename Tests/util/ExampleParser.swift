@@ -36,7 +36,24 @@ extension TextParser {
             }
             skip("\"")
             return String(chars)
-        case .arr(let item):
+        case .optional(.listNode):
+            let root = ListNode(0, nil)
+            var last = root
+            skip("[")
+            skipWhitespace()
+            while let c = peak(), c != "]" {
+                if c == "," {
+                    next()
+                } else {
+                    let node = ListNode(parseData(.int) as! Int, nil)
+                    last.next = node
+                    last = node
+                }
+                skipWhitespace()
+            }
+            skip("]")
+            return root.next as Any
+        case .array(let item):
             skip("[")
             skipWhitespace()
             var items: [Any] = []
@@ -50,6 +67,9 @@ extension TextParser {
             }
             skip("]")
             return items
+        default:
+            assert(false, "unknown type \(type)")
+            return "unknown"
         }
     }
 }

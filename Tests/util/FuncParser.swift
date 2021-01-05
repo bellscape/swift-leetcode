@@ -5,7 +5,9 @@ indirect enum ParameterType: Equatable {
     case double
     case bool
     case string
-    case arr(ParameterType)
+    case array(ParameterType)
+    case optional(ParameterType)
+    case listNode
 }
 typealias FuncType = (params: [ParameterType], output: ParameterType)
 
@@ -21,9 +23,16 @@ extension TextParser {
             skip("<")
             let t = parseParameterType()
             skip(">")
-            return .arr(t)
+            return .array(t)
+        case "Optional":
+            skip("<")
+            let t = parseParameterType()
+            skip(">")
+            return .optional(t)
+        case "ListNode":
+            return .listNode
         default:
-            assert(false)
+            assert(false, "unknown type \(word)")
         }
     }
 }
@@ -76,8 +85,8 @@ class FuncParserTest: XCTestCase {
 
     func testExample() throws {
         let p = p3()
-        XCTAssertTrue(FuncParser.parse(f_3) == ([.arr(.arr(.int)), .arr(.int), .int], .arr(.int)))
-        XCTAssertTrue(FuncParser.parse(f_2) == ([.arr(.int), .int], .int))
+        XCTAssertTrue(FuncParser.parse(f_3) == ([.array(.array(.int)), .array(.int), .int], .array(.int)))
+        XCTAssertTrue(FuncParser.parse(f_2) == ([.array(.int), .int], .int))
         XCTAssertTrue(FuncParser.parse(p.lengthOfLongestSubstring) == ([.string], .int))
         XCTAssertTrue(FuncParser.parse(f_1) == ([.int], .int))
     }
