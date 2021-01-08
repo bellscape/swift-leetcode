@@ -1,7 +1,5 @@
-import XCTest
-
 // Remove Duplicates from Sorted Array
-class p26: XCTestCase {
+class p26 {
 
 
     func removeDuplicates(_ nums: inout [Int]) -> Int {
