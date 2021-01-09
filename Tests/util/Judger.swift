@@ -26,8 +26,11 @@ struct Judger {
             print()
             print("Example \(i + 1):")
             print("Input: \(example.input)")
+            let startTime = Date()
             let actual = example.call(function)
+            let cost = Int(-startTime.timeIntervalSinceNow * 1000)
             print("Output actual: \(actual)")
+            print("Exec cost: \(cost) ms")
             if let output = example.output {
                 print("Output expected: \(output)")
                 XCTAssertEqual(actual, output as! O)
